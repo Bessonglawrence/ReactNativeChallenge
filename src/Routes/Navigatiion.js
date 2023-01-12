@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -44,11 +45,18 @@ const TabNavigation = () =>{
                     tabBarActiveTintColor: '#3798c8',
                     tabBarInactiveTintColor: 'gray',
                     tabBarLabelStyle:{
-                        fontSize: 13,
-                        paddingBottom: 2
+                        fontSize: 14,
+                        paddingBottom: 4
                     },
                     tabBarStyle:{
-                        height: 55
+                        ...Platform.select({
+                            ios:{
+                                height: 90,
+                            },
+                            android:{
+                                height: 60
+                            }
+                        })
                     }
                     })}
             >

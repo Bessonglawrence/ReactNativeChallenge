@@ -1,14 +1,41 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React,{useState, useEffect} from 'react';
+import { ScrollView, View, Text, Animated, FlatList } from 'react-native';
+import { PanGestureHandler } from 'react-native-gesture-handler';
+
+import{ homes } from '../../../res/data';
+import { HomeCard } from '../../sections';
+import styles from './HomeScreenStyle';
+
 
 const HomeScreen = () => {
-  return (
-    <View>
-      <Text> we are in the HomeScreen</Text>
-    </View>
-  )
+
+  const [ initialHomes, setInitialHomes] = useState([])
+
+  useEffect(() =>{
+    setInitialHomes(homes)
+  })
+
+    scrollEnded = (obj) => {
+        this.scrolledDistance = obj.nativeEvent.contentOffset.y;
+    }
+
+    return(
+        <FlatList
+            contentContainerStyle={styles.mainContainer}
+            onScrollEndDrag={this.scrollEnded}
+            data={initialHomes}
+            renderItem={({ item, index }) => { 
+                {
+                    return (
+                        <View key={index}>
+                            <HomeCard home={item} key={item.id} /> 
+                        </View>
+                    )
+                }
+            }}
+            keyExtractor={item => (item.id).toString()}
+        />
+    );
 }
 
-export default HomeScreen
-
-const styles = StyleSheet.create({})
+export default HomeScreen;
