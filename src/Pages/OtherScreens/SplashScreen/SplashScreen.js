@@ -21,9 +21,15 @@ const SplashScreen = ({navigation}) => {
       useNativeDriver: true
 		}).start();
 	}
+    const handleNavigation = () =>{
+        setTimeout(() =>{
+            navigation.navigate('TabNavigation')
+        },10000)
+    }
   
   useEffect(() =>{
     fadeAnimation();
+    handleNavigation();
   })
 
   return(
