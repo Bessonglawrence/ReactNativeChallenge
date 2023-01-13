@@ -1,13 +1,16 @@
+import { HomeScreen, FlickerRent } from "./Homes";
 import SettingScreen from "./SettingScreen/SettingScreen";
-import HomeScreen from "./HomeScreen/HomeScreen";
 import LoginScreen from "./LoginScreen/LoginScreen";
 import RegisterScreen from "./RegisterScreen/RegisterScreen";
-import ProfileScreen from "./ProfileScreen/ProfileScreen"
+import ProfileScreen from "./ProfileScreen/ProfileScreen";
+import { SplashScreen } from "./OtherScreens";
 
 export {
     SettingScreen,
     HomeScreen,
+    FlickerRent,
     LoginScreen,
     RegisterScreen,
-    ProfileScreen
+    ProfileScreen,
+    SplashScreen
 }

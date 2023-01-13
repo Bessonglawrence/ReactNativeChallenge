@@ -1,7 +1,8 @@
 const styles = {
     mainContainer: {
         paddingVertical: 15,
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'lightgrey'
     }
 
 }

@@ -8,12 +8,14 @@
 
 import React from 'react';
 import TabNavigation from './Routes/Navigatiion';
+import StackNavigation from './Routes/StackNavigation';
+//import StackNavigation from './Routes/StackNavigation';
 
 
 const App = () => {
   
   return (
-    <TabNavigation />
+    <StackNavigation />
   );
 };
 
