@@ -1,6 +1,11 @@
-import { View, Text } from 'react-native'
-import {View, Text,TouchableOpacity, ImageBackground} from 'react-native';
+import {
+    View, 
+    Text,
+    TouchableOpacity, 
+    ImageBackground
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import styles from './LoginCard.style';
 
 import React from 'react'
 
@@ -11,7 +16,7 @@ const LoginCard = ({login}) => {
     const handleNavigation = () =>{
         switch(login.id){
             case 1:
-                navigation.navigate('');
+                navigation.navigate('designedLogin');
                 break;
         }
     }

@@ -14,7 +14,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import styles from './FlickerRentStyle';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const FlickerRent = (navigation) => {
+const FlickerRent = ({navigation}) => {
     return (
         <View style={styles.mainContainer}>
             <StatusBar backgroundColor={"#4c97ea"} barStyle={"light-content"} />
@@ -25,7 +25,7 @@ const FlickerRent = (navigation) => {
                 locations={[0.6,1]}
             >
                 <View style={styles.headerView}>
-                    <TouchableOpacity onPress={() => Alert.alert('Back button has been pressed')} >
+                    <TouchableOpacity onPress={() => navigation.goBack()} >
                         <Icon name='arrow-back-circle' size={35} color='lightgrey' />
                     </TouchableOpacity>
                     <Text style={styles.headerText}>

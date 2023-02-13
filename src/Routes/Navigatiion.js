@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { 
     HomeScreen, 
     ProfileScreen, 
-    RegisterScreen, 
+    LoginHome, 
     SettingScreen, 
 } from '../Pages';
 
@@ -32,10 +32,10 @@ const TabNavigation = () =>{
                         iconName = focused
                             ? 'settings'
                             : 'settings-outline';
-                    } else if ( route.name === 'Register'){
+                    } else if ( route.name === 'Login'){
                         iconName = focused 
-                            ? 'list-outline'
-                            : 'list-circle-outline';
+                            ? 'lock-closed-sharp'
+                            : 'lock-closed-outline';
                     }
         
                     // You can return any component that you like here!
@@ -62,7 +62,7 @@ const TabNavigation = () =>{
             <Tab.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
             <Tab.Screen name='Profile' component={ProfileScreen} />
             <Tab.Screen name='Setting' component={SettingScreen} />
-            <Tab.Screen name='Register' component={RegisterScreen} />
+            <Tab.Screen name='Login' component={LoginHome} />
         </Tab.Navigator>
     )
 }
