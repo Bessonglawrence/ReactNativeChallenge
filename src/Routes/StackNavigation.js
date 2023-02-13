@@ -6,7 +6,8 @@ import {
   ProfileScreen, 
   FlickerRent,
   SplashScreen,
-  DesignedLogin
+  DesignedLogin,
+  Cameron,
 } from '../Pages';
 import TabNavigation from './Navigatiion';
 
@@ -19,6 +20,7 @@ const StackNavigation = () => {
             <Stack.Screen component={SplashScreen} options={{headerShown: false}} name='splash'/>
             <Stack.Screen component={TabNavigation} options={{ headerShown: false }} name='TabNavigation' />
             <Stack.Screen component={FlickerRent} options={{ headerShown: false}} name='flickerRent' />
+            <Stack.Screen component={Cameron} options={{headerShown: false}} name='cameron' />
             <Stack.Screen component={DesignedLogin} options={{ headerShown: false}} name='designedLogin' />
         </Stack.Navigator>
     </NavigationContainer>

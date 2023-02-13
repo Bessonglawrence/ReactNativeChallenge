@@ -243,6 +243,44 @@ const settings = [
 	},
 ]; 
 
+const Friends = [
+	{
+		id: 1,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 2,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 3,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 4,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 5,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 6,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+	{
+		id: 7,
+		name: 'Cameron',
+		image: require('./Images/cameron.jpeg')
+	},
+];
+
 
 
 
@@ -251,4 +289,5 @@ export {
     profiles,
     logins,
     settings,
+	Friends
 }

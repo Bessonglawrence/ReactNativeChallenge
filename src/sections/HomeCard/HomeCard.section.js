@@ -12,7 +12,7 @@ const HomeCard = ({home}) => {
                 navigation.navigate('flickerRent')
                 break;
             case 2:
-                navigation.navigate('flickerRent')
+                navigation.navigate('cameron')
                 break;
         }
     }
