@@ -13,24 +13,25 @@ const styles = {
         paddingTop: 20
     },
     headerText: {
-        alignSelf: 'center',
+        color: 'white', 
+        fontSize: 22, 
+        fontWeight: 'bold', 
+        marginLeft: 25,
+        marginTop: 5,
+        
+    },
+    headerView:{
         ...Platform.select({
             ios:{
-                color: 'white', 
-                fontSize: 22, 
-                fontWeight: 'bold', 
-                marginLeft: 25,
-                paddingTop: 30
+                flexDirection: 'row', 
+                marginLeft: 15,
+                marginTop: 35
             },
             android:{
-                color: 'white', 
-                marginBottom: 3, 
-                fontSize: 22, 
-                fontWeight: 'bold', 
-                marginLeft: 25
+                flexDirection: 'row', 
+                marginLeft: 15,
             }
         })
-
     },
     subHeaderText:{
         color: 'white', 

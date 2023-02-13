@@ -1,5 +1,13 @@
 import React from 'react';
-import { View , Text, TextInput,Image, TouchableOpacity, Pressable, Alert } from 'react-native';
+import { 
+    View, 
+    Text, 
+    TextInput,
+    Image, 
+    TouchableOpacity, 
+    Alert,
+    StatusBar
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -9,14 +17,15 @@ import { ScrollView } from 'react-native-gesture-handler';
 const FlickerRent = (navigation) => {
     return (
         <View style={styles.mainContainer}>
+            <StatusBar backgroundColor={"#4c97ea"} barStyle={"light-content"} />
             <LinearGradient 
                 colors={['#68a7ed', '#4c97ea']} 
                 style={styles.linearGradient}
                 start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
                 locations={[0.6,1]}
             >
-                <View style={{flexDirection: 'row', marginLeft: 15}}>
-                    <TouchableOpacity onPress={() => Alert.alert('Back button has been pressed')}>
+                <View style={styles.headerView}>
+                    <TouchableOpacity onPress={() => Alert.alert('Back button has been pressed')} >
                         <Icon name='arrow-back-circle' size={35} color='lightgrey' />
                     </TouchableOpacity>
                     <Text style={styles.headerText}>
@@ -166,7 +175,7 @@ const FlickerRent = (navigation) => {
                     </View>
                 </ScrollView>
             </View>
-            <View style={{marginBottom: 10}}>
+            <View style={{marginTop: 20, marginBottom: 30}}>
                 <Text style={styles.recentViewHeader}>
                     Recently Viewed Products
                 </Text>
