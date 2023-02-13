@@ -1,8 +1,11 @@
+import { CurrentRenderContext } from "@react-navigation/native";
+import { Platform } from "react-native";
+
 const styles = {
     mainContainer:{
         flex: 1, 
         backgroundColor: 'white', 
-        alignItems: 'center'
+        alignItems: 'center',
     },
     linearGradient:{
         width: '100%',
@@ -10,11 +13,24 @@ const styles = {
         paddingTop: 20
     },
     headerText: {
-        color: 'white', 
-        marginBottom: 3, 
-        fontSize: 22, 
-        fontWeight: 'bold', 
-        marginLeft: 30
+        alignSelf: 'center',
+        ...Platform.select({
+            ios:{
+                color: 'white', 
+                fontSize: 22, 
+                fontWeight: 'bold', 
+                marginLeft: 25,
+                paddingTop: 30
+            },
+            android:{
+                color: 'white', 
+                marginBottom: 3, 
+                fontSize: 22, 
+                fontWeight: 'bold', 
+                marginLeft: 25
+            }
+        })
+
     },
     subHeaderText:{
         color: 'white', 

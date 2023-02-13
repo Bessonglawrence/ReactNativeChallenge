@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
-import {View, Text,TouchableOpacity, ImageBackground, Image} from 'react-native';
+import React from 'react';
+import {View, Text,TouchableOpacity, ImageBackground,} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import styles from './HomeCard.style';
 
-const HomeCard = ({navigation, home}) => {
+const HomeCard = ({home}) => {
+    const navigation = useNavigation()
+
+    const handleNavigation = () =>{
+        switch(home.id){
+            case 1:
+                navigation.navigate('flickerRent')
+                break;
+            case 2:
+                navigation.navigate('flickerRent')
+                break;
+        }
+    }
         return (
             <View style={styles.mainContainer}>
-                <TouchableOpacity onPress={() => {
-                    switch(home.id){
-                        case 1:
-                            navigation.navigate.rentflicker();
-                            break;
-                        case 2:
-                            navigation.navigate.socialapp();
-                }}}>
+                <TouchableOpacity onPress={() => handleNavigation(home.id)} >
                     <ImageBackground
                     source = {home.image}
                     style = {styles.image}

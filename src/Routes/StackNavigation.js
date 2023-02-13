@@ -14,8 +14,8 @@ const Stack = createNativeStackNavigator()
 const StackNavigation = () => {
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='profile'>
-            <Stack.Screen component={SplashScreen} name='profile'/>
+        <Stack.Navigator initialRouteName='splash'>
+            <Stack.Screen component={SplashScreen} options={{headerShown: false}} name='splash'/>
             <Stack.Screen component={TabNavigation} options={{ headerShown: false }} name='TabNavigation' />
             <Stack.Screen component={FlickerRent} options={{ headerShown: false}} name='flickerRent' />
         </Stack.Navigator>

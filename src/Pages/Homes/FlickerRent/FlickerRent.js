@@ -1,6 +1,6 @@
 import React from 'react';
-import { View , Text, TextInput,Image, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View , Text, TextInput,Image, TouchableOpacity, Pressable, Alert } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './FlickerRentStyle';
@@ -15,12 +15,15 @@ const FlickerRent = (navigation) => {
                 start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}}
                 locations={[0.6,1]}
             >
-                <Text style={styles.headerText}>
-                    RENT FLICKER
-                </Text>
-                <Text style={styles.subHeaderText}>
-                    Main Categories
-                </Text>
+                <View style={{flexDirection: 'row', marginLeft: 15}}>
+                    <TouchableOpacity onPress={() => Alert.alert('Back button has been pressed')}>
+                        <Icon name='arrow-back-circle' size={35} color='lightgrey' />
+                    </TouchableOpacity>
+                    <Text style={styles.headerText}>
+                        RENT FLICKER
+                    </Text>
+                </View>
+
                 <View  style={styles.searchView}>
                     <Icon name="search" color="lightgrey" size={35} style={styles.searchIcon}/>
                     <TextInput

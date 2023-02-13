@@ -15,9 +15,9 @@ const HomeScreen = () => {
     setInitialHomes(homes)
   })
 
-    scrollEnded = (obj) => {
-        this.scrolledDistance = obj.nativeEvent.contentOffset.y;
-    }
+    // scrollEnded = (obj) => {
+    //     this.scrolledDistance = obj.nativeEvent.contentOffset.y;
+    // }
 
     return(
         <SafeAreaView>
